@@ -8,13 +8,11 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
-    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+    "jsstart": "react-scripts start",
+    "jsbuild": "react-scripts build",
+    "asbuild": "asc assembly/index.ts -b public/as-api.wasm",
+    "start": "npm run asbuild && npm run jsstart",
+    "build": "npm run asbuild && npm run jsbuild"
   },
   "eslintConfig": {
     "extends": "react-app"

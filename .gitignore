@@ -11,6 +11,9 @@
 # production
 /build
 
+# Compiled web assembly
+/public/as-api*
+
 # misc
 .DS_Store
 .env.local
