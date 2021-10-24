@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.4",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "typescript": "^4.4.4"
   },
   "scripts": {
     "jsstart": "react-scripts start",
     "jsbuild": "react-scripts build",
-    "asbuild": "asc assembly/index.ts -b public/as-api.wasm",
+    "asbuild": "asc assembly/index.ts --exportRuntime -b public/as-api.wasm",
     "start": "npm run asbuild && npm run jsstart",
     "build": "npm run asbuild && npm run jsbuild"
   },

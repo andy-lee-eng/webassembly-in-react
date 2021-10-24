@@ -6,7 +6,7 @@ import waApi from './wa-api';
 function App() {
   const [value, setValue] = useState(5);
   const [result, setResult] = useState();
-  const [scamble, setScramble] = useState('scramble this string');
+  const [scramble, setScramble] = useState('scramble this string');
 
   return (
     <div className="App">
@@ -20,8 +20,8 @@ function App() {
       </button>
 
 
-      <p>Scrambled string: {scamble}</p>
-      <button onClick={async () => setScramble((await waApi).scramble(scamble))}>
+      <p>Scrambled string: {scramble}</p>
+      <button onClick={async () => setScramble((await waApi).scramble(scramble))}>
         Scramble
       </button>
     </div>
